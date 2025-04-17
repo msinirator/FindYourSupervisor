@@ -1,0 +1,22 @@
+CREATE PROCEDURE dbo.InsertImage 
+	
+	@Image As Image,
+	@Height As smallint,
+	@Width As smallint,
+	@UserID As bigint
+
+AS
+
+
+Insert Into dbo.Images	( 
+						[Image], 
+						Height,
+						Width,
+						UserID) 
+VALUES					(
+						@Image,
+						@Height,
+						@Width, 
+						@UserID)
+	 
+RETURN
